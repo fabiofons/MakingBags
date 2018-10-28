@@ -1,0 +1,45 @@
+#menu-bar {
+    display: none;     
+}
+
+header label {
+    float: right;
+    font-size: 15px;
+    /* margin: 15px 0; */
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.menu-display {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    height: 100vh;
+    background: rgba(51,51,51,0.9);
+    width: 100%;
+    transition: all 0.3s;
+    transform: translateX(-100%)
+}
+
+.menu-display a {  /*tambien puedo utilizar ".item-list a" o nav > ul li a */
+    color: #fff;
+    display: block;
+    padding: 15px;
+    line-height: 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    /* font-size: 20px; */
+}
+
+.menu-display a:hover {
+    background:rgba(255,255,255,0.5);
+}
+
+#menu-bar:checked ~ .menu-display {
+    transform: translateX(0%);
+    transition: all 0.5s;
+}
+
+
